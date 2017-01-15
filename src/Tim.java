@@ -29,6 +29,6 @@ public class Tim
     }
     public void info()
     {
-
+        System.out.println(NazovTimu+"      "+ body+"       "+ PocetSpravnych+"                  "+ PocetNespravnych+"                   "+ BodyZaSpravne+"                 " + BodyZaNespravne );
     }
 }

@@ -48,4 +48,12 @@ public class Question {
     public void doNotRepeatQuestion() {
 
     }
+
+    public void giveQuestion() {
+
+    }
+
+    public void addPoints() {
+
+    }
 }

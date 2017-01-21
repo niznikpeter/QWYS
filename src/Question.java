@@ -1,4 +1,6 @@
+import java.io.Console;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * Created by otep9 on 13.01.2017.
@@ -26,12 +28,14 @@ public class Question {
     private String answersPAY[] = new String[50];
 
     public void pickQuestion(int a) {
+        Scanner scan  =new Scanner(System.in);
         Random rn = new Random();
         int ran = rn.nextInt(random);
         switch (a) {
             case 1:                                    //vyberie nahodnu otazku z temy SXT
                 System.out.println(questionsSXT[ran]);
-                System.out.println("Správna odpoveď je: ");
+                System.out.println("Správna odpoveď je: (Stlac Enter pre zobrazenie spravnej odpovede)");
+                scan.nextLine();                       //pauza
                 System.out.println(answersSXT[ran]);
                 doNotRepeatQuestion(ran, questionsSXT);
                 doNotRepeatAnswer(ran, answersSXT);
@@ -39,6 +43,7 @@ public class Question {
             case 2:                                    //vyberie nahodnu otazku z temy SIE
                 System.out.println(questionsSIE[ran]);
                 System.out.println("Správna odpoveď je: ");
+                scan.nextLine();
                 System.out.println(answersSIE[ran]);
                 doNotRepeatQuestion(ran, questionsSIE);
                 doNotRepeatAnswer(ran, answersSIE);
@@ -46,6 +51,7 @@ public class Question {
             case 3:                                    //vyberie nahodnu otazku z temy PAY
                 System.out.println(questionsPAY[ran]);
                 System.out.println("Správna odpoveď je: ");
+                scan.nextLine();
                 System.out.println(answersPAY[ran]);
                 doNotRepeatQuestion(ran, questionsPAY);
                 doNotRepeatAnswer(ran, answersPAY);
@@ -53,6 +59,7 @@ public class Question {
             case 4:                                    //vyberie nahodnu otazku z temy PRO
                 System.out.println(questionsPRO[ran]);
                 System.out.println("Správna odpoveď je: ");
+                scan.nextLine();
                 System.out.println(answersPRO[ran]);
                 doNotRepeatQuestion(ran, questionsPRO);
                 doNotRepeatAnswer(ran, answersPRO);
@@ -60,6 +67,7 @@ public class Question {
             case 5:                                    //vyberie nahodnu otazku z temy AEN
                 System.out.printf(questionsAEN[ran]);
                 System.out.println("Správna odpoveď je: ");
+                scan.nextLine();
                 System.out.println(answersAEN[ran]);
                 doNotRepeatQuestion(ran, questionsAEN);
                 doNotRepeatAnswer(ran, answersAEN);
@@ -67,6 +75,7 @@ public class Question {
             case 6:                                    //vyberie nahodnu otazku z temy DAT
                 System.out.printf(questionsDAT[ran]);
                 System.out.println("Správna odpoveď je: ");
+                scan.nextLine();
                 System.out.println(answersDAT[ran]);
                 doNotRepeatQuestion(ran, questionsDAT);
                 doNotRepeatAnswer(ran, answersDAT);
@@ -99,4 +108,6 @@ public class Question {
         else
             return -5;
     }
+
+
 }
